@@ -57,7 +57,7 @@
       "attrsOnSameLineAsTag": false,
       "maxAttrsOnTag": 1,
       "firstAttributeOnSameLine": false,
-      "alignWithFirstAttribute": true
+      "alignWithFirstAttribute": false
     }
   }
 }
