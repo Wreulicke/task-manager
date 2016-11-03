@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "watch":"npm-run-all --parallel watch:*",
-    "build":"npm-run-all build:js build:bundle",
-    "watch:browser":"browser-sync start --server --config bs-config.js",
-    "watch:js": "webpack --watch",
+    "watch": "npm-run-all --parallel watch:*",
+    "build": "npm-run-all build:js build:bundle",
+    "watch:browser": "browser-sync start --server --config bs-config.js",
+    "fix":"eslint --fix src/**/*.js",
+    "watch:js": "npm-run-all fix &&webpack --watch",
     "build:js": "cross-env NODE_ENV=production webpack -p",
-    "build:bundle":"vulcanize --inline-scripts index.html --out-html docs/index.html"
+    "build:bundle": "vulcanize --inline-scripts index.html --out-html docs/index.html"
   },
   "repository": {
     "type": "git",
@@ -39,5 +40,12 @@
     "npm-run-all": "^3.1.1",
     "vulcanize": "^1.14.8",
     "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "localforage": "^1.4.3",
+    "material-ui": "^0.16.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-tap-event-plugin": "^1.0.0"
   }
 }
