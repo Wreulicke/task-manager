@@ -1,7 +1,5 @@
-module.exports = function(resolve, reject) {
-  if (this != null && resolve != null) {
+module.exports = function(resolve) {
+  if (this != null) {
     return resolve(this)
-  } else {
-    reject()
   }
 }
