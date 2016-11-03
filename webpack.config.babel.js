@@ -1,9 +1,9 @@
 const path = require("path");
 const webpack = require("webpack");
-const resolve = function () {
+const resolve = function() {
   return path.resolve(this);
 }
-const p = function () {
+const p = function() {
   if (process.env.NODE_ENV == "production") return this;
 }
 module.exports = {
@@ -20,7 +20,10 @@ module.exports = {
   },
   resolve: {
     moduleDirectories: ["node_modules"],
-    extensions: ["", ".js"]
+    extensions: ["", ".js"],
+    alias: {
+      localforage: "localforage/dist/localforage.nopromises.js"
+    }
   },
   module: {
     preLoaders: [{
