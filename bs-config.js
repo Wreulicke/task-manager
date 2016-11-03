@@ -20,7 +20,7 @@ module.exports = {
         }
     },
     "files": [
-        "index.html", "target/bundle.js"
+        "index.html", "target/index.js"
     ],
     "watchOptions": {},
     "server": false,
