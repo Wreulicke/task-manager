@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "watch": "npm-run-all --parallel watch:*",
     "build": "npm-run-all build:js build:bundle",
-    "watch:browser": "browser-sync start --server --config bs-config.js",
+    "watch": "npm-run-all --parallel watch:*",
+    "prebuild": "npm-run-all fix format",
     "fix": "eslint --fix src/**/*.js",
-    "watch:js": "npm-run-all fix &&webpack --watch",
+    "format": "esformatter -i src/**/*.js",
+    "watch:browser": "browser-sync start --server --config bs-config.js",
+    "watch:js": "npm-run-all prebuild &&webpack --watch",
     "build:js": "cross-env NODE_ENV=production webpack -p",
     "build:bundle": "vulcanize --inline-scripts index.html --out-html docs/index.html"
   },
@@ -46,6 +48,7 @@
     "material-ui": "^0.16.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-sortable-pane": "^0.5.4",
     "react-tap-event-plugin": "^1.0.0"
   },
   "esformatter": {

@@ -35,6 +35,13 @@
     "prefer-const": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "no-console": "off"
+    "no-console": "off",
+    "no-undefined": "error",
+    "dot-notation": "error",
+    "no-extra-bind": "error",
+    "no-multi-spaces": "error",
+    "no-useless-return": "error",
+    "wrap-iife": "error",
+    "no-lonely-if": "error"
   }
 }
