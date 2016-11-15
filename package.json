@@ -12,7 +12,7 @@
     "format": "esformatter -i src/**/*.js",
     "watch:browser": "browser-sync start --server --config bs-config.js",
     "watch:js": "npm run prebuild && rollup -c rollup.config.js --watch",
-    "watch:test": "npm run test -- --watch",
+    "watchx:test": "npm run test -- --watch",
     "build:js": "cross-env NODE_ENV=production rollup -c rollup.config.js",
     "build:bundle": "vulcanize --inline-scripts index.html --out-html docs/index.html"
   },
@@ -58,7 +58,8 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-sortable-pane": "^0.5.4",
-    "react-tap-event-plugin": "^1.0.0"
+    "react-tap-event-plugin": "^1.0.0",
+    "throttle-debounce": "^1.0.1"
   },
   "esformatter": {
     "plugins": [
