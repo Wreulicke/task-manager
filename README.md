@@ -1,7 +1,7 @@
 # task-manager
 task-management application
 
-#Usage
+# Usage
 go [github pages](https://wreulicke.github.io/task-manager/)
 
 # description
